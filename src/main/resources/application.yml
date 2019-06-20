@@ -28,11 +28,16 @@ spring:
     locations: "classpath:/db/migration"
 
   #TODO: change sleuth sample probability
-
+  sleuth:
+    sampler:
+      probability: 1.0
+  zipkin:
+    base-url: http://zipkin.team-a.cloud.school.thoughtworks.cn
   #TODO: add zipkin configs for local
-
 #TODO: change servlet log level to view the logs
-
+logging:
+  level:
+    org.springframework.web: DEBUG
 springfox:
   documentation:
     swagger:
