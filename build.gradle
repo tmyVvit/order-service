@@ -4,7 +4,7 @@ buildscript {
     }
 
     repositories {
-        maven {url "http://nexus.cloud.school.thoughtworks.cn/repository/maven-public/"}
+//        maven {url "http://nexus.cloud.school.thoughtworks.cn/repository/maven-public/"}
         maven {url 'http://maven.aliyun.com/nexus/content/groups/public/'}
         mavenCentral()
     }
@@ -43,7 +43,7 @@ docker {
 }
 
 repositories {
-    maven {url "http://nexus.cloud.school.thoughtworks.cn/repository/maven-public/"}
+//    maven {url "http://nexus.cloud.school.thoughtworks.cn/repository/maven-public/"}
     maven {url 'http://maven.aliyun.com/nexus/content/groups/public/'}
     mavenCentral()
 }
@@ -54,6 +54,10 @@ ext {
 
 dependencies {
     //TODO: add actuator, hystrix, dashboard starter
+
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'org.springframework.cloud:spring-cloud-starter-netflix-hystrix'
+    implementation 'org.springframework.cloud:spring-cloud-starter-netflix-hystrix-dashboard'
 
     implementation 'org.springframework.cloud:spring-cloud-starter-zipkin'
 
