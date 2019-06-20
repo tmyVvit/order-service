@@ -4,7 +4,7 @@ buildscript {
     }
 
     repositories {
-        maven {url "http://nexus.cloud.school.thoughtworks.cn/repository/maven-public/"}
+//        maven {url "http://nexus.cloud.school.thoughtworks.cn/repository/maven-public/"}
         maven {url 'http://maven.aliyun.com/nexus/content/groups/public/'}
         mavenCentral()
     }
@@ -43,7 +43,7 @@ docker {
 }
 
 repositories {
-    maven {url "http://nexus.cloud.school.thoughtworks.cn/repository/maven-public/"}
+//    maven {url "http://nexus.cloud.school.thoughtworks.cn/repository/maven-public/"}
     maven {url 'http://maven.aliyun.com/nexus/content/groups/public/'}
     mavenCentral()
 }
@@ -54,7 +54,8 @@ ext {
 
 dependencies {
     //TODO: add zipkin starter
-
+    implementation 'org.springframework.cloud:spring-cloud-starter-zipkin'
+    
     implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
 
     implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
